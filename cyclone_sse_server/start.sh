@@ -1,1 +1,1 @@
-twistd -n cyclone-sse -r "server.App"
+twistd -n cyclone-sse -r "server.App" --broker=redis

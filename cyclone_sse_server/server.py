@@ -12,10 +12,13 @@ from cyclone_sse.periodic import GraphiteExport
 
 
 class CustomBroadcastHandler(BroadcastHandler):
-    pass
 
     #def authorize(self):
-    #    raise cyclone.web.HTTPAuthenticationRequired
+    #    #raise cyclone.web.HTTPAuthenticationRequired
+    #    pass
+
+    def get_channels(self):
+        return ["base", "node"]
 
 
 class App(cyclone.web.Application):
